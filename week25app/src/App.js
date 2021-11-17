@@ -33,7 +33,7 @@ const data = {
 const PieChart = () => (
   <>
     <div className='header'>
-      <h1 className='title'>Pie CHart</h1>
+      <h1 className='title'>Pie Chart</h1>
       <div className='links'>
       </div>
     </div>
