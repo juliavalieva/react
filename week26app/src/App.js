@@ -43,7 +43,7 @@ return (
 <div className="App">
 {
 heroes.map((hero) =>
-<Hero name = {hero.name} img = {hero.img} feature = {hero.feature} description = {hero.description}>
+<Hero name = {hero.name} key = {hero.name} img = {hero.img} feature = {hero.feature} description = {hero.description}>
 </Hero>
 )
 }
