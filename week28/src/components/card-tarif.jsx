@@ -1,30 +1,18 @@
-import React, {useState} from 'react';
+import React, { useState } from "react";
 import "./card-tarif.scss";
 
+const Card = ({ price, speed, isSelected }) => {
+  const [pressed, setPressed] = useState(false);
+  const handleChange = () => {
+    setPressed(!pressed);
+  };
 
-
-const Card = ({price, speed, isSelected}) => {
-    const [pressed, setPressed ] = useState(false);
-    const handleChange = () => {
-        setPressed(!pressed)
-    }
-  
   return (
-    <button onClick={handleChange} className={`card ${isSelected ? "selected" : ""}`}>
-      {/* {!pressed ? (
-        ""
-      ) : (
-        <div
-          style={{
-            height: "20px",
-          }}
-        >
-          Вы выбрали тариф:
-        </div>
-      )} */}
-      <div className={`card-header${price}`}>
-        Безлимитный {price}
-      </div>
+    <button
+      onClick={handleChange}
+      className={`card ${isSelected ? "selected" : ""}`}
+    >
+      <div className={`card-header${price}`}>Безлимитный {price}</div>
       <div className="card-body">
         <div className={`card-price${price}`}>
           <div className="card-info1">руб</div>
@@ -36,6 +24,6 @@ const Card = ({price, speed, isSelected}) => {
       </div>
     </button>
   );
-}
+};
 
 export default Card;
